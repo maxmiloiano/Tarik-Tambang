@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF0000">
+
+    <!-- Audience Background -->
+    <ImageView
+        android:id="@+id/audienceBackground"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/audience"
+        android:scaleType="fitXY" />
+
+    <!-- Team 1 Score -->
+    <TextView
+        android:id="@+id/team1Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="36sp"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/audienceBackground"
+        android:layout_marginTop="20dp"
+        android:layout_centerVertical="true" />
+
+    <!-- Team 2 Score -->
+    <TextView
+        android:id="@+id/team2Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="36sp"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/audienceBackground"
+        android:layout_marginTop="20dp"
+        android:layout_centerVertical="true" />
+
+    <!-- Combined Team Characters Frame -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/audienceBackground"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <!-- Left Click Area for Team 1 -->
+        <View
+            android:id="@+id/leftClickArea"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:importantForAccessibility="no" />
+
+        <!-- Combined Team Characters Image -->
+        <ImageView
+            android:id="@+id/combinedTeamsImage"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/combined_teams_image"
+            android:contentDescription="Combined Team Characters"
+            android:layout_gravity="center" />
+
+        <!-- Right Click Area for Team 2 -->
+        <View
+            android:id="@+id/rightClickArea"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:importantForAccessibility="no" />
+    </FrameLayout>
+</RelativeLayout>
